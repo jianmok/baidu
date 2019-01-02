@@ -1,4 +1,4 @@
-body {
+body,header, main {
     border: 0;
     margin: 0;
     padding: 0;
@@ -6,16 +6,15 @@ body {
 body {
     display:flex;
     flex-direction: column;
+    justify-content: space-around
 }
 header {
     width: 100%;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
     height: 20px;
     background: #eff1f3;
     border-bottom: 1px dashed black;
     position: relative;
+    margin-bottom: 30px;
 }
 .top-left {
     float: left;
@@ -31,6 +30,7 @@ header {
     font-size: 15px;
 }
 .main {
+    margin-bottom: 50px;
     position: 500px, 50px;
     bottom: 20%;
     display: block;
@@ -75,9 +75,11 @@ header {
 .table {
     margin: 0;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: initial;
     top: 100px;
     display: flex;
+    height: 500px;
+    border-color: #000000;
 }
 item-header {
     height: 50px;
@@ -85,6 +87,8 @@ item-header {
 }
 item-header-left {
     float: left;
+    position: absolute;
+    left: inherit
 }
 .notice .advice {
     font-size: 20px;
@@ -99,6 +103,7 @@ item-header-left {
     height: 40px;
 }
 item-main {
+    overflow: auto;
     position: relative;
     top: 50px;
 }
@@ -111,7 +116,6 @@ item-main {
     height: 450px;
     float: right;
     right: 100px;
-
 }
 .hottitle {
     left: 10px;
@@ -162,15 +166,7 @@ li {
     float: left;
 }
 footer {
-    /* clear: both; */
-    /* position: absolute; */
-    /* position: fixed; */
-    /* bottom: 50px; */
-    /* display: inline; */
-    /* align: center; */
-    /* text-align: center; */
     left:45%;
-    /* align-items: baseline; */
     margin: 0;
     justify-content: center;
     flex-direction: row;
@@ -183,16 +179,16 @@ footer {
 .footcenter {
     clear: both;
     position: absolute;
-    /* position: fixed; */
     bottom: 50px;
     display: inline;
-    /* align: center; */
-    /* text-align: center; */
-    left:45%;
-    /* align-items: baseline; */
+    justify-content: center;
+    flex-direction: initial;
+    align: center;
+    text-align: center   
 }
 .toleft {
     text-align:left;
+    color: chocolate;
 }
 .toleft:hover {
     text-decoration:underline;
